@@ -1,0 +1,43 @@
+.front {
+
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    &__content {
+
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+        border: solid 1px black;
+        border-radius: 1rem;
+        padding: 1rem;
+        font-family: "Inter", sans-serif;
+        font-size: 1.5rem;
+
+    }
+
+}
+
+@media(min-width: 1000px) {
+.front {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    gap: 1vw;
+
+    &__content {
+
+        border: solid .1vw black;
+        border-radius: 1vw;
+        padding: 1vw;
+        font-size: 1.2vw;
+
+    }
+
+}
+}
