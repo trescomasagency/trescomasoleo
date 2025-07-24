@@ -3,6 +3,8 @@
 <?php if(have_posts()): ?>
     <?php while(have_posts()): the_post(); ?>
 
+        <p>Bienvenidos a la sección de veterinaria!!!</p>
+
         <h1><?= get_the_title(); ?></h1>
 
         <picture>
