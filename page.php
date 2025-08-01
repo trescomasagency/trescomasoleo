@@ -1,19 +1,21 @@
 <?php get_header(); ?>
 
 <?php if(have_posts()): ?>
-    <?php while(have_posts()): the_post(); ?>
+<?php while(have_posts()): ?>
+<?php the_post(); ?>
 
-        <h1><?= get_the_title(); ?></h1>
+    <h1><?= get_the_title(); ?></h1>
 
-        <picture>
-            <img src="<?= get_the_post_thumbnail_url(); ?>" alt="imagen de iphone" data-dato="test">
-        </picture>
-
-        <div>
-            <p><?= get_the_content(); ?></p>
-        </div>
-
-    <?php endwhile; ?>
+<?php endwhile; ?>
 <?php endif; ?>
+
+<section class="front" id="page-productos">
+    <form action="/" method="POST" id="form-gato">
+
+        <input type="text" name="title">
+        <button type="submit">enviar</button>
+        
+    </form>
+</section>
 
 <?php get_footer(); ?>
